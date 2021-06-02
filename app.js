@@ -84,10 +84,14 @@ let seattleStore = new cookiesStore('Seattle',23, 65, 6.3);
  let liamStore = new cookiesStore('Lima',2, 16, 4.6);
 //  liamStore.checkSales();
 //  liamStore.render();
+function AppndnewStore(){
 for(let i=0; i<branches.length;i++){
     branches[i].checkSales();
     branches[i].render();
 }
+}
+AppndnewStore();
+
 
 function Footrow(){
     let tots = document.createElement('tr');
@@ -114,4 +118,28 @@ function Footrow(){
     all.textContent= allTotal;
     
 }
+// AppndnewStore();
+// Footrow();
+
+const createForm = document.getElementById('newStore');
+createForm.addEventListener('submit', createStore);
+function createStore(event){
+    event.preventDefault();
+    console.log(event);    
+    let newAdd = event.target.Location.value;
+    let minCust = event.target.MinCustumoer.value;
+    let maxCust = event.target.MaxCustomer.value;
+    let averg = event.target.Average.value;
+
+    let newopenning = new cookiesStore(newAdd,minCust,maxCust,averg);
+    newopenning.checkSales();
+    newopenning.render();
+    
+    // console.log(branches);
+    
+}
+//AppndnewStore();
 Footrow();
+
+
+
