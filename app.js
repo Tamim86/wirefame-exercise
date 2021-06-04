@@ -46,6 +46,7 @@ function Rows(){
     heading.appendChild(dailyTotal);
     dailyTotal.textContent= 'Daily Total';
 }
+
 Rows();
 
 cookiesStore.prototype.render=function(){
@@ -62,8 +63,10 @@ cookiesStore.prototype.render=function(){
     let totalcell = document.createElement('th');
     tr.appendChild(totalcell);
     totalcell.textContent=this.totalSales;
+    
 
 }
+
 
 
    
@@ -84,6 +87,7 @@ let seattleStore = new cookiesStore('Seattle',23, 65, 6.3);
  let liamStore = new cookiesStore('Lima',2, 16, 4.6);
 //  liamStore.checkSales();
 //  liamStore.render();
+
 function AppndnewStore(){
 for(let i=0; i<branches.length;i++){
     branches[i].checkSales();
@@ -118,6 +122,7 @@ function Footrow(){
     all.textContent= allTotal;
     
 }
+
 // AppndnewStore();
 // Footrow();
 
@@ -126,20 +131,27 @@ createForm.addEventListener('submit', createStore);
 function createStore(event){
     event.preventDefault();
     console.log(event);    
-    let newAdd = event.target.Location.value;
-    let minCust = event.target.MinCustumoer.value;
-    let maxCust = event.target.MaxCustomer.value;
-    let averg = event.target.Average.value;
+    let newAdd = event.target.location.value;
+    
+    let minCust = parseFloat(event.target.minCustumor.value);
+    
+    let maxCust = parseFloat(event.target.maxCustomer.value);
+    
+    let averg = parseFloat(event.target.average.value);
+    
 
     let newopenning = new cookiesStore(newAdd,minCust,maxCust,averg);
     newopenning.checkSales();
     newopenning.render();
     
-    // console.log(branches);
+     console.log(branches);
+     
     
 }
-//AppndnewStore();
+
+
 Footrow();
+
 
 
 
