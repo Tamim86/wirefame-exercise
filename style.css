@@ -1,0 +1,52 @@
+body{
+    background-image: url(https://previews.123rf.com/images/atlasfoto/atlasfoto2005/atlasfoto200500663/146619800-chocolate-chip-cookies-and-milk-on-brown-background-top-view.jpg);
+    margin-left:90px;
+    margin-right: 90px;
+}
+
+header{
+    margin-top: 40px;
+    text-align: center;
+    
+}
+header nav {
+    background-color:azure;    
+}
+header nav ul li{
+    display: inline-block;
+    padding: 30px;
+    color:rgb(14, 1, 7);
+        
+}   
+
+main section img{
+    width: 1500px;
+    margin-top: 20px;
+    margin-left: 30%;
+    
+    
+}
+main div img{
+    width: 375px;
+    height: 300px;
+    padding: 5px;
+    margin-top: 20px;
+
+}
+main div p{
+    position: relative;
+    left: 490px;
+    top: 200px;
+}
+main section img{
+    width: 480px;
+    height: 400px;
+    position: relative;
+    right:450px;
+}
+button{
+    position: relative;
+    left: 490px;
+    bottom: 200px;
+
+}
